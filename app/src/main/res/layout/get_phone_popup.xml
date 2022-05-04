@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+    <ImageView
+        android:id="@+id/cancel1"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_remove"
+        android:layout_gravity="end"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:layout_marginTop="20sp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <Spinner
+                android:id="@+id/country_code_spin"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical" />
+            <LinearLayout
+                android:id="@+id/country_popup_click"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:minWidth="130dp"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/phone_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/txtColorLabel" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20sp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/cancel"
+            android:fontFamily="@font/cairo_regular"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/cancel"
+            android:background="@drawable/grey_round_btn"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_height="35sp"/>
+        <Button
+            android:layout_marginStart="10dp"
+            android:id="@+id/submit"
+            android:fontFamily="@font/cairo_regular"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/submit"
+            android:background="@drawable/pink_grad_button"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "644610375432",
+    "firebase_url": "https://sama-contact-len-1602662912585.firebaseio.com",
+    "project_id": "sama-contact-len-1602662912585",
+    "storage_bucket": "sama-contact-len-1602662912585.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644610375432:android:fbf95edcde0466507cb6bd",
+        "android_client_info": {
+          "package_name": "com.sama.samacontactlenses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644610375432-3hjecaso694noldq6ds3kqf9lmm8k6no.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sama.samacontactlenses",
+            "certificate_hash": "b7d27b2ebb18a0437731f4352ee2abfc1ec3824f"
+          }
+        },
+        {
+          "client_id": "644610375432-e9jd8hani9h2u76af0f4mgnl0pfm8bgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPxSePUe8kniBZ7uuTlLNkbdKZ-TyN8Yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644610375432-e9jd8hani9h2u76af0f4mgnl0pfm8bgv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "644610375432-k6ea01p789lon93cku5gubid2arjh46b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lensapp.samacontact"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_lay"
+    android:layout_width="170sp"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15sp"
+        android:id="@+id/cardView"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="140sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lence_image1" />
+                <TextView
+                    android:visibility="gone"
+                    android:fontFamily="@font/cairo_regular"
+                    android:paddingStart="5sp"
+                    android:paddingEnd="5sp"
+                    android:layout_marginTop="10sp"
+                    android:id="@+id/offer"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rect_grad"
+                    android:text="@string/off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:fontFamily="@font/cairo_bold"
+                    android:paddingStart="5sp"
+                    android:paddingEnd="5sp"
+                    android:layout_marginTop="10sp"
+                    android:id="@+id/percent"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rect_grad"
+                    android:text="10% off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/cairo_medium"
+                android:text="Black Diamond"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3sp"
+                android:layout_marginEnd="6dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_regular"
+                    android:text="Elite"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/txtColorLabel"
+                    android:textSize="12sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/cart1" />
+
+                <ImageView
+                    android:id="@+id/favBtn"
+                    android:layout_width="18sp"
+                    android:layout_height="18sp"
+                    android:src="@drawable/fav_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50sp"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/cardView"
+        app:cardCornerRadius="15sp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="8sp"
+        app:cardElevation="10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_medium"
+                android:gravity="end"
+                android:text="10 AED"
+                android:textColor="@color/gray_text_faded"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_medium"
+                android:gravity="end"
+                android:text="10 AED"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border_rounded_line"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_medium"
+                android:gravity="center_vertical"
+                android:text="Rabin Manna"
+                android:layout_weight="1"
+                android:textColor="@color/txtColorLabel"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/default_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_medium"
+                android:gravity="center_vertical"
+                android:text="@string/default_text"
+                android:textColor="@color/text_pink_clr"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center_vertical"
+            android:text="Rabin Manna"
+            android:layout_weight="1"
+            android:textColor="@color/txtColorLabel"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_medium"
+            android:gravity="center_vertical"
+            android:text="email"
+            android:textColor="@color/txtColor"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center_vertical"
+            android:text="This is dummy address Salt Lack Sector - 1 Kolkata -110065"
+            android:textColor="@color/txtColor"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_regular"
+                android:gravity="center_vertical"
+                android:text="+91 875353636"
+                android:layout_weight="1"
+                android:textColor="@color/txtColor"
+                android:textSize="17sp" />
+            <ImageView
+                android:id="@+id/set_default"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/box_checked"
+                app:tint="@color/colorPrimary" />
+
+
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:id="@+id/edit_address"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/edit_pen_withback"
+                />
+            <ImageView
+                android:id="@+id/delete_address"
+                android:layout_marginStart="10dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="3dp"
+                android:src="@drawable/delete"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

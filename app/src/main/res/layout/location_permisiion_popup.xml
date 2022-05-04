@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_corner_btn_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/pop_close"
+            android:adjustViewBounds="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/cairo_regular"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/without_the_location_service_you_will_not_be_able_to_use_this_application_please_give_permission_to_this_application_to_access_your_location_and_turn_on_your_location_service_to_enjoy_the_exclusive_features_of_this_application"/>
+
+        <Button
+            android:id="@+id/exit_btn"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/red_button_background"
+            android:fontFamily="@font/cairo_regular"
+            android:text="@string/exit"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

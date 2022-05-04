@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        android:id="@+id/header"
+        layout="@layout/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="55sp"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomNavigation"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="right"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@android:color/transparent"
+                    app:sliderIndicatorUnselectedColor="@android:color/transparent"
+                    app:sliderScrollTimeInSec="5"
+                    app:sliderStartAutoCycle="true" />
+
+                <LinearLayout
+                    android:id="@+id/trenHeaderLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/rect_grad"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/trenHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="15sp"
+                        android:fontFamily="@font/cairo_medium"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/trendin"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/seeAltrend"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_long_arrow_pointing_to_the_right"
+                        android:drawablePadding="5sp"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/cairo_medium"
+                        android:gravity="start|center_vertical"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/seeAl"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_view_trend_prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <LinearLayout
+                    android:id="@+id/trendLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="2sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/shadow_top"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/newHeaderLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/cairo_medium"
+                        android:id="@+id/newHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="15sp"
+                        android:text="@string/newpro"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_marginTop="2sp"
+                        android:id="@+id/newLine1"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal" />
+                    <TextView
+                        android:id="@+id/seeAllnew"
+                        android:layout_marginStart="10sp"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_long_arrow_pointing_to_the_right"
+                        android:drawablePadding="5sp"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/cairo_medium"
+                        android:gravity="start|center_vertical"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/seeAl"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_view_new_prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <LinearLayout
+                    android:id="@+id/newLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/shadow_top"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/offerHeaderLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/offerHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="15sp"
+                        android:fontFamily="@font/cairo_medium"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/off"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/seeAlloff"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_long_arrow_pointing_to_the_right"
+                        android:drawablePadding="5sp"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/cairo_medium"
+                        android:gravity="start|center_vertical"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/seeAl"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/offerLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="5sp"
+                    android:background="#ffdfe2"
+                    android:orientation="horizontal" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_view_off_prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <LinearLayout
+                    android:id="@+id/categoryheaderLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/rect_grad"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/categoryheader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="15sp"
+                        android:fontFamily="@font/cairo_medium"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/category"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/seeAllCat"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_long_arrow_pointing_to_the_right"
+                        android:drawablePadding="5sp"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/cairo_medium"
+                        android:gravity="start|center_vertical"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/seeAl"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_view_cat_prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15sp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/rect_grad"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="15sp"
+                        android:fontFamily="@font/cairo_medium"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/celeb"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_long_arrow_pointing_to_the_right"
+                        android:drawablePadding="5sp"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/cairo_medium"
+                        android:gravity="start|center_vertical"
+                        android:paddingTop="5sp"
+                        android:paddingBottom="5sp"
+                        android:text="@string/seeAl"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_view_celeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15sp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                    app:spanCount="1" />
+                <LinearLayout
+                    android:background="@color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="70sp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <include
+            android:layout_gravity="bottom"
+            android:id="@+id/footer"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bottom_menu"/>
+    </FrameLayout>
+
+</RelativeLayout>

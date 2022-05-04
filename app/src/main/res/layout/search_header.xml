@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60sp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="15sp"
+    android:paddingEnd="15sp">
+
+    <ImageView
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginTop="1sp"
+        android:onClick="back"
+        android:src="@drawable/ic_baseline_keyboard_backspace_24"
+        app:tint="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusedByDefault="true"
+        android:fontFamily="@font/cairo_medium"
+        android:padding="10sp"
+        android:text="@string/searchresult"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <ImageView
+        android:layout_width="25sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="15sp"
+        android:src="@drawable/search"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/cart_count_tv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignRight="@+id/scart"
+            android:background="@drawable/cart_round"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center"
+            android:text="99"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/scart"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginTop="7dp"
+            android:onClick="shopping_cart"
+            android:src="@drawable/cart" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="25sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="10sp"
+        android:onClick="filter"
+        android:src="@drawable/filter" />
+</LinearLayout>

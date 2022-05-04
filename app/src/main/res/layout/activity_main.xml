@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="40sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/logo"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="50sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginStart="30sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/engMat"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="1"
+
+                app:contentPaddingTop="30sp"
+                app:contentPaddingBottom="30sp"
+                app:cardCornerRadius="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1sp"
+                app:cardElevation="5sp">
+                <LinearLayout
+                    android:layout_marginStart="40sp"
+                    android:layout_marginEnd="40sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/english"
+                            android:layout_width="85sp"
+                            android:layout_height="85sp"
+                            android:src="@drawable/flag1"
+                            />
+                        <ImageView
+                            android:visibility="gone"
+                            android:padding="10sp"
+                            android:id="@+id/tickEng"
+                            android:layout_width="85sp"
+                            android:layout_height="85sp"
+                            android:src="@drawable/flag_tick"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:fontFamily="@font/cairo_regular"
+                        android:textColor="@color/txtColor"
+                        android:id="@+id/engTxt"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15sp"
+                        android:textAlignment="center"
+                        android:text="@string/english"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/arbMat"
+                android:layout_marginStart="10sp"
+                android:layout_weight="1"
+                app:contentPaddingTop="30sp"
+                app:contentPaddingBottom="30sp"
+                app:cardCornerRadius="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1sp"
+                app:cardElevation="5sp">
+                <LinearLayout
+                    android:layout_marginStart="40sp"
+                    android:layout_marginEnd="40sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/arabic"
+                            android:layout_width="85sp"
+                            android:layout_height="85sp"
+                            android:src="@drawable/flag2"
+                            />
+                        <ImageView
+                            android:visibility="gone"
+                            android:padding="10sp"
+                            android:id="@+id/tickArb"
+                            android:layout_width="85sp"
+                            android:layout_height="85sp"
+                            android:src="@drawable/flag_tick"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:fontFamily="@font/cairo_regular"
+                        android:id="@+id/arbTxt"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15sp"
+                        android:textAlignment="center"
+                        android:text="@string/arabic"
+                        android:textColor="@color/txtColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginTop="60sp"
+            android:text="@string/selCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_margin="30sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50sp">
+            <Spinner
+                android:layout_weight="1"
+                android:id="@+id/shi_spin_country"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:entries="@array/listArray"
+                android:background="@drawable/spinner_drop"
+                android:paddingStart="10dp" />
+
+            <LinearLayout
+                android:onClick="openSpinPopup"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                />
+        </RelativeLayout>
+        <Button
+            android:onClick="start"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="@string/start"
+            android:background="@drawable/pink_grad_button"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginStart="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/back_title_header"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/shadow_bottom"
+        android:orientation="vertical" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/shadow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/keyword"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="15dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/key_autotext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_your_keyword"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:fontFamily="@font/cairo_medium"
+                    android:completionThreshold="0"
+                    android:importantForAutofill="no"
+                    android:textColor="@color/txtColorLabel" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5sp"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shadow_bottom"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/sorting"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/name_rbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_regular"
+                    android:text="@string/name"
+                    android:textColor="@color/txtColorLabel"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/price_H_t_L_rbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/cairo_regular"
+                    android:text="@string/price_high_low"
+                    android:textColor="@color/txtColorLabel"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/price_L_t_H_rbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/cairo_regular"
+                    android:text="@string/price_low_high"
+                    android:textColor="@color/txtColorLabel"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5sp"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shadow_bottom"
+                android:orientation="vertical" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/price"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.jaygoo.widget.RangeSeekBar
+                android:visibility="gone"
+                android:id="@+id/price_range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                app:rsb_gravity="bottom"
+                app:rsb_indicator_background_color="@color/white"
+                app:rsb_indicator_height="wrap_content"
+                app:rsb_indicator_padding_bottom="5dp"
+                app:rsb_indicator_padding_top="5dp"
+                app:rsb_indicator_radius="5dp"
+                app:rsb_indicator_show_mode="alwaysShow"
+                app:rsb_indicator_text_color="@color/colorPrimaryDark"
+                app:rsb_indicator_text_size="10dp"
+                app:rsb_indicator_width="wrap_content"
+                app:rsb_max="50"
+                app:rsb_min="18"
+                app:rsb_min_interval="5"
+                app:rsb_mode="range"
+                app:rsb_progress_color="@color/colorPrimaryDark"
+                app:rsb_progress_default_color="@color/colorPrimary"
+                app:rsb_progress_height="4dp"
+                app:rsb_thumb_drawable="@drawable/red_circle"
+                app:rsb_thumb_height="20dp"
+                app:rsb_thumb_width="20dp"
+                app:rsb_tick_mark_layout_gravity="bottom"
+                app:rsb_tick_mark_mode="number" />
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="5sp"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shadow_bottom"
+                android:orientation="vertical" />
+
+
+            <Button
+                android:id="@+id/apply_btn"
+                android:layout_width="match_parent"
+                android:layout_height="55sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pink_grad_button"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/apply"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

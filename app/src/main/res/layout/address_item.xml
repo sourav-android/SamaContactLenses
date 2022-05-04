@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border_rounded_line"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_medium"
+            android:gravity="center_vertical"
+            android:text="Rabin Manna"
+            android:textColor="@color/txtColorLabel"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center_vertical"
+            android:text="Rabin Manna"
+            android:textColor="@color/txtColorLabel"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center_vertical"
+            android:text="This is dummy address Salt Lack Sector - 1 Kolkata -110065"
+            android:textColor="@color/txtColor"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center_vertical"
+            android:text="+91 875353636"
+            android:textColor="@color/txtColor"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

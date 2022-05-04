@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.OpeningAcitvity">
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/splash"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/loader_img"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:src="@drawable/ic_loading"
+        android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:gravity="center"
+        android:background="@color/transBlack"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80sp">
+        <Button
+            android:onClick="choose"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingEnd="50sp"
+            android:paddingStart="50sp"
+            android:text="@string/enter"
+            android:background="@drawable/round_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

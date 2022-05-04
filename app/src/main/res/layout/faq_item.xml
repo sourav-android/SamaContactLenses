@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/head_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/que_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cairo_medium"
+                android:text="Why should I sell on Driver Group?"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/drop_down_arw" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ans_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/cairo_regular"
+            android:layout_marginEnd="10dp"
+            android:text="Faq Lst Titleaq Lst Titleaqitleaq Lst Titleaqitleaq Lst Titleaqitleaq Lst Titleaqitleaq Lst Titleaqitleaq Lst Titleaq Lst Titleaq Lst Titleaq Lst Titleaq Lst Titleaq Lst Title"
+            android:textColor="@color/txtColorLabel"
+            android:textSize="12dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="---------------------------------------------------------------------------------------------------------------------------------------------------"
+        android:maxLines="1"
+        android:fontFamily="@font/cairo_regular"
+        android:textColor="@color/txtColorLabel"
+        android:layout_marginTop="5dp"
+        />
+</LinearLayout>
